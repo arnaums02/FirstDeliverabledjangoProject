@@ -1,11 +1,11 @@
 {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'detail_film.css' %}">
-
+<a href="{% url 'book_list' %}"><button>Inici</button></a>
 <h1>{{ book.title }}</h1>
 <p>Autor: {{ book.author }}</p>
-<p>Género: {{ book.genre }}</p>
-<p>Duración (minutos): {{ book.duration }}</p>
-<h2>Comentarios</h2>
+<p>Génere: {{ book.genre }}</p>
+<p>Duració (minuts): {{ book.duration }}</p>
+<h2>Comentaris</h2>
 {% for review in book.review_set.all %}
     <p> <b>{{review.user.username|capfirst}} </b>: {{ review.content }} <b>{{ review.rating }}/5</b></p>
 {% endfor %}
