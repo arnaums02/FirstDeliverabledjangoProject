@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'film_list.css' %}">
+    
+<h1>Lista de Películas</h1>
+<div class="film-container">
+    {% for film in books %}
+        {% for review in review %}
+            {% if film.title == review.title %}
+                
+            {% endif %}
+        {% endfor %}
+            <div class="film-item">
+                <a href="{% url 'book_detail' pk=film.pk %}">
+                    <h2>{{ film.title }}</h2>
+                </a>
+                <div class="film-info">
+                    <div><strong>Autor:</strong> {{ film.author }}</div>
+                    <div><strong>Género:</strong> {{ film.genre }}</div>
+                    <div><strong>Duración:</strong> {{ film.duration }} minutos</div>
+                </div>
+            </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

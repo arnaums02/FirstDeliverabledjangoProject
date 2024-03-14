@@ -1,0 +1,46 @@
+/* Estilos para el contenedor principal */
+
+h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+.film-item h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave de color al pasar el ratón */
+}
+
+/* Cambiar el color del título al pasar el ratón */
+.film-item h2:hover {
+    color: #007bff; /* Color azul más intenso */
+    text-decoration: underline; /* Subrayar el título */
+}
+
+.film-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Estilos para cada película */
+.film-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+
+/* Estilos para la información de la película */
+.film-info div {
+    margin-bottom: 5px;
+}
+
+/* Estilos para diferentes columnas */
+@media (max-width: 768px) {
+    .film-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
