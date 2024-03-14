@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Crear Review - LIBRARY</title>
+    <title>Crear Review - FILM</title>
 </head>
 <body>
-<h2>Agregar un nuevo comentario</h2>
+<a href="{% url 'book_list' %}"><button>Inici</button></a>
+<h2>Afegir un nou comentari</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}

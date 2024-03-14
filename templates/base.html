@@ -10,15 +10,15 @@
 <body>
 <nav>
     <ul>
-        <li><a href="{% url 'book_list' %}">Inicio</a></li>
-        <li><a href="{% url 'create_book' %}">Añadir pelicula</a></li>
+        <li><a href="{% url 'book_list' %}">Inici</a></li>
+        <li><a href="{% url 'create_book' %}">Afegir película</a></li>
         {% if user.is_authenticated %}
             <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
           {% csrf_token %}
-          <button type="submit">Cerrar sesión</button>
+          <button type="submit">Tancar sessió</button>
         </form>
         {% else %}
-            <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+            <li><a href="{% url 'login' %}">Iniciar sessió</a></li>
         {% endif %}
     </ul>
 </nav>

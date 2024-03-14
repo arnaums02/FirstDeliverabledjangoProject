@@ -41,3 +41,9 @@ h2 {
 .review b:hover {
     text-decoration: underline; /* Subrayar el nombre de usuario */
 }
+
+/* Centrar els botons */
+.button-container {
+    display: flex;
+    justify-content: center;
+}

@@ -6,6 +6,11 @@
 <p>Génere: {{ book.genre }}</p>
 <p>Duració (minuts): {{ book.duration }}</p>
 <h2>Comentaris</h2>
+<div class="button-container">
+    <a href="{% url 'review_create' pk=book.pk %}">
+        <button>Nou Comentari</button>
+    </a>
+</div>
 {% for review in book.review_set.all %}
     <p> <b>{{review.user.username|capfirst}} </b>: {{ review.content }} <b>{{ review.rating }}/5</b></p>
 {% endfor %}

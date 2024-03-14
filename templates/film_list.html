@@ -4,7 +4,7 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'film_list.css' %}">
     
-<h1>Lista de Películas</h1>
+<h1>Llista de Películes</h1>
 <div class="film-container">
     {% for film in books %}
         {% for review in review %}
@@ -18,8 +18,8 @@
                 </a>
                 <div class="film-info">
                     <div><strong>Autor:</strong> {{ film.author }}</div>
-                    <div><strong>Género:</strong> {{ film.genre }}</div>
-                    <div><strong>Duración:</strong> {{ film.duration }} minutos</div>
+                    <div><strong>Gènere:</strong> {{ film.genre }}</div>
+                    <div><strong>Duració:</strong> {{ film.duration }} minuts</div>
                 </div>
             </div>
     {% endfor %}

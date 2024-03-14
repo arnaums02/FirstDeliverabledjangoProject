@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
  <meta charset="UTF-8">
- <title>Crear Libro - LIBRARY</title>
+ <title>Crear Película - FILM</title>
 </head>
 <body>
+<a href="{% url 'book_list' %}"><button>Inici</button></a>
 <form method="post">
  {% csrf_token %}
  {{ form.as_p }}
