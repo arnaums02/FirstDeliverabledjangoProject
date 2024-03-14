@@ -22,4 +22,11 @@ form {
 
 button{
     margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #f0f0f0; /* Color de fondo */
+    color: #333; /* Color del texto */
+    text-decoration: none;
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Borde redondeado */
 }
