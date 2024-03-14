@@ -11,7 +11,7 @@ body {
 /* Estilos para el formulario */
 form {
     margin: 0 auto; /* Centrar horizontalmente */
-    margin-top: 25  px; /* Espacio superior para separar del borde superior */
+    margin-top: 25px; /* Espacio superior para separar del borde superior */
     background-color: #fff;
     max-width: 300px;
     padding: 20px;
