@@ -1,0 +1,43 @@
+/* Estilos para el contenedor principal */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    color: #333; /* Color de texto principal */
+}
+
+/* Estilos para la información del libro */
+p {
+    text-align: center; /* Centra el texto horizontalmente */
+    color: #555; /* Color de texto secundario */
+}
+
+/* Estilos para los comentarios */
+h2 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 30px; /* Espacio adicional entre el título y los comentarios */
+    font-size: 22px; /* Tamaño de fuente para el título de comentarios */
+}
+
+.review {
+    border: 1px solid #ccc; /* Borde para cada comentario */
+    padding: 15px; /* Espaciado interno para cada comentario */
+    margin-bottom: 15px; /* Espacio entre comentarios */
+}
+
+.review b {
+    color: #007bff; /* Color azul para el nombre de usuario y la calificación */
+}
+
+/* Cambiar el color del nombre de usuario al pasar el ratón */
+.review b:hover {
+    text-decoration: underline; /* Subrayar el nombre de usuario */
+}
