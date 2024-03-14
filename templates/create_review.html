@@ -6,6 +6,7 @@
 </head>
 <body>
 <a href="{% url 'book_list' %}"><button>Inici</button></a>
+<h1>{{ book.title }}</h1>
 <h2>Afegir un nou comentari</h2>
 <form method="post">
     {% csrf_token %}
