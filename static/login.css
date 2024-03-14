@@ -5,7 +5,10 @@ body {
     background-color: #f0f0f0;
     height: 100vh;
     text-align: center;
+    margin-top: 20px;
 }
+
+
 
 form {
     margin: 0 auto; /* Centrar horizontalmente */

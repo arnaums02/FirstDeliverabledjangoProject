@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <title>Crear Película - FILM</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'create_review.css' %}">
+     <meta charset="UTF-8">
+     <title>Crear Película - FILM</title>
 </head>
 <body>
 <a href="{% url 'book_list' %}"><button>Inici</button></a>
+<h1>Afegir película</h1>
 <form method="post">
  {% csrf_token %}
  {{ form.as_p }}

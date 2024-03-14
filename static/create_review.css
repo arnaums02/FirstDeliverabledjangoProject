@@ -1,0 +1,25 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Estilos para el formulario */
+form {
+    margin: 0 auto; /* Centrar horizontalmente */
+    margin-top: 25  px; /* Espacio superior para separar del borde superior */
+    background-color: #fff;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Agregado: Separación entre el formulario y la lista de libros */
+}
+
+button{
+    margin-top: 20px;
+}
