@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
-from films.views import BookListView, book_detail, create_book, create_review
+from films.views import BookListView, book_detail, create_book, create_review, actor_detail
 
 from django.conf import settings
 from django.views.static import serve
@@ -28,6 +28,7 @@ urlpatterns = [
     path('film/<int:pk>/', book_detail, name='book_detail'),
     path('film/create/', create_book, name='create_book'),
     path('film/<int:pk>/review/create/', create_review, name='review_create'),
+    path('actor/<int:pk>/', actor_detail, name='actor_detail'),
 
     # NOT RECOMMENDED! but can be used to serve static content if we are on DEBUG=False
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),

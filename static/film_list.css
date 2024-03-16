@@ -24,12 +24,14 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    justify-content: center; /* Centra los elementos horizontalmente */
 }
 
 /* Estilos para cada película */
 .film-item {
     border: 1px solid #ccc;
     padding: 20px;
+    text-align: center;
 }
 
 

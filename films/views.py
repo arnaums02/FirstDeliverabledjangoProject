@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404
 from films.forms import BookForm, ReviewForm
 from django.views.generic import ListView
-from films.models import Film, Review
+from films.models import Film, Review, Actor
 
 
 class BookListView(ListView):
@@ -42,3 +42,8 @@ def create_review(request, pk):
     else:
         form = ReviewForm()
         return render(request, 'create_review.html', {'form': form, 'book': book})
+
+
+def actor_detail(request, pk):
+    actor = get_object_or_404(Actor, pk=pk)
+    return render(request, 'actor_detail.html', {'actor': actor})

@@ -1,0 +1,82 @@
+/* Estilos para el contenedor principal de actores */
+#actor-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilos para cada elemento de actor */
+.actor-item {
+  background-color: #f0f0f0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin: 5px;
+  display: flex; /* Utilizamos flexbox para alinear los elementos */
+  align-items: center; /* Alineamos verticalmente los elementos */
+}
+
+/* Estilos para el punto delante de cada actor */
+.actor-item::before {
+  content: "•"; /* Añadimos un punto delante de cada actor */
+  margin-right: 5px; /* Espacio entre el punto y el nombre del actor */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    color: #333; /* Color de texto principal */
+}
+
+
+h2 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    color: #333; /* Color de texto principal */
+}
+
+/* Estilos para la información del actor */
+p {
+    text-align: center; /* Centra el texto horizontalmente */
+    color: #555; /* Color de texto secundario */
+}
+
+
+.film-item h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave de color al pasar el ratón */
+}
+
+/* Cambiar el color del título al pasar el ratón */
+.film-item h2:hover {
+    color: #007bff; /* Color azul más intenso */
+    text-decoration: underline; /* Subrayar el título */
+}
+
+/* Estilos para el contenedor principal */
+.film-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px;
+    flex-wrap: wrap; /* Asegura que los elementos se envuelvan cuando no haya suficiente espacio */
+}
+
+.film-item {
+    width: 300px; /* Establece un ancho fijo para cada elemento */
+    flex: 0 0 auto; /* Evita que los elementos se expandan para llenar el contenedor */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px; /* Ajusta el margen entre los elementos */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
+}

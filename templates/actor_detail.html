@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'detail_actor.css' %}">
+<a href="{% url 'book_list' %}"><button>Inici</button></a>
+<h1>{{ actor.name }}</h1>
+<p>Edat: {{ actor.age }}</p>
+<p>País: {{ actor.country }}</p>
+<h2>Películes en que ha participat.</h2>
+<div class="film-container">
+    {% for film in actor.films.all %}
+        <div class="film-item">
+            <a href="{% url 'book_detail' pk=film.pk %}">
+                <h2>{{ film.title }}</h2>
+            </a>
+            <div class="film-info">
+                <div><strong>Autor:</strong> {{ film.author }}</div>
+                <div><strong>Gènere:</strong> {{ film.genre }}</div>
+                <div><strong>Duració:</strong> {{ film.duration }} minuts</div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+</div>
