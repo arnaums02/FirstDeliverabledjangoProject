@@ -5,6 +5,14 @@
 <p>Autor: {{ book.author }}</p>
 <p>Génere: {{ book.genre }}</p>
 <p>Duració (minuts): {{ book.duration }}</p>
+<h2>Actors</h2>
+<div id="actor-container">
+  {% for actor in book.actors.all %}
+    <div class="actor-item">
+      <p>{{ actor.name }} - {{ actor.country }}</p>
+    </div>
+  {% endfor %}
+</div>
 <h2>Comentaris</h2>
 <div class="button-container">
     <a href="{% url 'review_create' pk=book.pk %}">
