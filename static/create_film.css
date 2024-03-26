@@ -23,3 +23,24 @@ form {
 button{
     margin-top: 20px;
 }
+
+/* Estilo para el campo actors */
+#id_actors {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 150px; /* Altura adecuada para mostrar múltiples opciones */
+    padding: 5px; /* Añade un pequeño espacio entre el borde y el contenido */
+    font-size: 14px; /* Tamaño de fuente adecuado */
+    border: 1px solid #ccc; /* Agrega un borde para definir el área del campo */
+    border-radius: 4px; /* Agrega bordes redondeados */
+    box-sizing: border-box; /* Asegura que el tamaño total del campo incluya el borde y el relleno */
+}
+
+/* Estilo para las opciones dentro del campo actors */
+#id_actors option {
+    padding: 3px; /* Añade espacio interno entre las opciones */
+}
+
+/* Estilo para cuando se selecciona una opción */
+#id_actors option:checked {
+    background-color: #f0f0f0; /* Cambia el color de fondo cuando se selecciona una opción */
+}

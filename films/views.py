@@ -1,7 +1,7 @@
 from django.db.models import Avg
 from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404
-from films.forms import BookForm, ReviewForm
+from films.forms import BookForm, ReviewForm, ActorForm
 from django.views.generic import ListView
 from films.models import Film, Review, Actor
 
@@ -47,3 +47,16 @@ def create_review(request, pk):
 def actor_detail(request, pk):
     actor = get_object_or_404(Actor, pk=pk)
     return render(request, 'actor_detail.html', {'actor': actor})
+
+
+def create_actors(request):
+    if request.method == 'POST':
+        form = ActorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # Redirecciona a alguna página después de guardar el actor exitosamente
+            return redirect('create_actors')
+    else:
+        form = ActorForm()
+
+    return render(request, 'create_actors.html', {'form': form})

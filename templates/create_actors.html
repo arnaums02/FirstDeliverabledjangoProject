@@ -8,12 +8,12 @@
 </head>
 <body>
 <a href="{% url 'book_list' %}"><button>Inici</button></a>
-<h1>Afegir película</h1>
+<h1>Afegir actors.</h1>
 <form method="post">
- {% csrf_token %}
- {{ form.as_p }}
- <input type="submit" value="Create">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Crear</button>
 </form>
-<p>Falten actors? <a href="{% url 'create_actors' %}">Afegir actors.</a></p>
+<p>Has afegit tots els actors?<a href="{% url 'create_book' %}">Afegir película</a></p>
 </body>
 </html>
