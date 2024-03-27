@@ -1,19 +1,23 @@
 {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'detail_film.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'detail_film.css' %}">
 <a href="{% url 'book_list' %}"><button>Inici</button></a>
 <h1>{{ book.title }}</h1>
 <p>Autor: {{ book.author }}</p>
-<p>Génere: {{ book.genre }}</p>
+<p>Gènere: {{ book.genre }}</p>
 <p>Duració (minuts): {{ book.duration }}</p>
 <h2>Actors</h2>
 <div id="actor-container">
-  {% for actor in book.actors.all %}
-    <div class="actor-item">
-      <a href="{% url 'actor_detail' pk=actor.pk%}">
-      <p>{{ actor.name }} - {{ actor.age }} - {{ actor.country }}</p>
-      </a>
-    </div>
-  {% endfor %}
+  {% if book.actors.all %}
+    {% for actor in book.actors.all %}
+      <div class="actor-item">
+        <a href="{% url 'actor_detail' pk=actor.pk%}">
+          <p>{{ actor.name }} - {{ actor.age }} - {{ actor.country }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p><em>No hay actores disponibles.</em></p>
+  {% endif %}
 </div>
 <h2>Comentaris</h2>
 <div class="button-container">
@@ -21,6 +25,10 @@
         <button>Nou Comentari</button>
     </a>
 </div>
-{% for review in book.review_set.all %}
+{% if book.review_set.all %}
+  {% for review in book.review_set.all %}
     <p> <b>{{review.user.username|capfirst}} </b>: {{ review.content }} <b>{{ review.rating }}/5</b></p>
-{% endfor %}
+  {% endfor %}
+{% else %}
+  <p><em>No hay comentarios disponibles. Se el primero en comentar la película!</em></p>
+{% endif %}

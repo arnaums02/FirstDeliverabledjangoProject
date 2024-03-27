@@ -29,9 +29,10 @@ h1 {
 
 /* Estilos para cada película */
 .film-item {
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     padding: 20px;
     text-align: center;
+    background: #d4e0f8;
 }
 
 
@@ -113,3 +114,4 @@ h1 {
 .selected {
     font-weight: bold; /* Poner en negrita */
 }
+

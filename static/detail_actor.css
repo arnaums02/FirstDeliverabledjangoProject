@@ -75,10 +75,12 @@ p {
 .film-item {
     width: 300px; /* Establece un ancho fijo para cada elemento */
     flex: 0 0 auto; /* Evita que los elementos se expandan para llenar el contenedor */
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     padding: 20px;
     margin: 10px; /* Ajusta el margen entre los elementos */
     box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
+    text-align: center;
+    background: #d4e0f8;
 }
 
 /* Estilos para el contenedor principal */
