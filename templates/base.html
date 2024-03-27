@@ -17,14 +17,14 @@
                 <li>
                     <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
                         {% csrf_token %}
-                        <li><button type="submit">Tancar sessió</button></li>
+                        <button type="submit">Tancar sessió</button>
                     </form>
                 </li>
             {% else %}
                 <li><a href="{% url 'login' %}">Iniciar sessió</a></li>
             {% endif %}
         </ul>
-        <h1>Films</h1>
+        <h1>WikiFilms</h1>
     </header>
 </nav>
 {% block content %}

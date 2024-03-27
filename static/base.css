@@ -1,7 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    padding: 0;
+    padding: 20px;
+    padding-top: 110px;
     background-color: #f0f0f0;
     height: 100vh;
 }
@@ -9,19 +10,24 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 10px 20px;
     text-align: center;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 20px;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -34,11 +40,12 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; /* Cambiado a bloque para que los elementos estén uno debajo del otro */
+    display: inline-block; /* Cambiado a bloque para que los elementos estén uno al lado del otro */
     margin-right: 10px; /* Espaciado entre elementos */
 }
 
-nav ul li a {
+nav ul li a,
+nav ul li button {
     display: inline-block;
     padding: 10px 20px; /* Espaciado interno */
     background-color: #f0f0f0; /* Color de fondo */
@@ -48,6 +55,7 @@ nav ul li a {
     border-radius: 5px; /* Borde redondeado */
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li button {
     background-color: #ddd; /* Cambio de color al pasar el ratón */
 }
