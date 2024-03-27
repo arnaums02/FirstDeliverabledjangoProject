@@ -9,7 +9,9 @@
 <div id="actor-container">
   {% for actor in book.actors.all %}
     <div class="actor-item">
-      <p>{{ actor.name }} - {{ actor.country }}</p>
+      <a href="{% url 'actor_detail' pk=actor.pk%}">
+      <p>{{ actor.name }} - {{ actor.age }} - {{ actor.country }}</p>
+      </a>
     </div>
   {% endfor %}
 </div>

@@ -4,20 +4,37 @@
 <h1>{{ actor.name }}</h1>
 <p>Edat: {{ actor.age }}</p>
 <p>País: {{ actor.country }}</p>
-<h2>Películes en que ha participat.</h2>
-<div class="film-container">
-    {% for film in actor.films.all %}
-        <div class="film-item">
-            <a href="{% url 'book_detail' pk=film.pk %}">
-                <h2>{{ film.title }}</h2>
-            </a>
-            <div class="film-info">
-                <div><strong>Autor:</strong> {{ film.author }}</div>
-                <div><strong>Gènere:</strong> {{ film.genre }}</div>
-                <div><strong>Duració:</strong> {{ film.duration }} minuts</div>
-            </div>
-        </div>
-    {% endfor %}
+<div class="container">
+  <h2 class="section-title">Películas en que ha participado?</h2>
+  <div class="dropdown">
+    <button class="dropbtn">Ordenar por <span class="current-order">▼</span></button>
+    <div class="dropdown-content">
+      <a href="?order=duracion&direction=asc">Duración (ascendente)</a>
+      <a href="?order=duracion&direction=desc">Duración (descendente)</a>
+      <a href="?order=alfabetico&direction=asc">Título (ascendente)</a>
+      <a href="?order=alfabetico&direction=desc">Título (descendente)</a>
+    </div>
+  </div>
 </div>
+
+<div class="film-container">
+    {% if films %}
+        {% for film in films %}
+            <div class="film-item">
+                <a href="{% url 'book_detail' pk=film.pk %}">
+                    <h2>{{ film.title }}</h2>
+                </a>
+                <div class="film-info">
+                    <div><strong>Autor:</strong> {{ film.author }}</div>
+                    <div><strong>Gènere:</strong> {{ film.genre }}</div>
+                    <div><strong>Duració:</strong> {{ film.duration }} minuts</div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No hay películas disponibles.</p>
+    {% endif %}
+</div>
+
 
 </div>

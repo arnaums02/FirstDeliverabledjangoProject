@@ -54,6 +54,8 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+    margin-top: 10px; /* Reducir margen superior */
+  margin-bottom: 10px; /* Reducir margen inferior */
 }
 
 /* Estilos para cada elemento de actor */
@@ -65,6 +67,12 @@ h2 {
   display: flex; /* Utilizamos flexbox para alinear los elementos */
   align-items: center; /* Alineamos verticalmente los elementos */
 }
+
+.actor-item a:hover,
+.actor-item a:hover p {
+  color: #007bff; /* Cambiar color del enlace y del texto al pasar el cursor */
+}
+
 
 .actor-item:before {
   content: "•"; /* Añadimos un punto delante de cada actor */

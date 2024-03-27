@@ -12,7 +12,7 @@ body {
 form {
     margin: 0 auto; /* Centrar horizontalmente */
     margin-top: 50px; /* Espacio superior para separar del borde superior */
-    background-color: #fff;
+    background-color: #000;
     max-width: 300px;
     padding: 20px;
     border-radius: 5px;

@@ -22,7 +22,7 @@ def create_book(request):
         form = BookForm(request.POST)
         if form.is_valid():
             book = form.save()
-            return redirect('book_detail', pk=book.pk) # Redirigir al usuario a detalles del libro
+            return redirect('book_detail', pk=book.pk) # Redirigir al usuario.
     else:
         form = BookForm()
         return render(request, 'create_film.html', {'form': form})
@@ -45,8 +45,30 @@ def create_review(request, pk):
 
 
 def actor_detail(request, pk):
-    actor = get_object_or_404(Actor, pk=pk)
-    return render(request, 'actor_detail.html', {'actor': actor})
+    actor = Actor.objects.get(pk=pk)
+    films = actor.films.all()
+
+    order_by = request.GET.get('order')
+    direction = request.GET.get('direction')
+
+    if order_by == 'duracion':
+        if direction == 'asc':
+            films = films.order_by('duration')
+        elif direction == 'desc':
+            films = films.order_by('-duration')
+    elif order_by == 'alfabetico':
+        if direction == 'asc':
+            films = films.order_by('title')
+        elif direction == 'desc':
+            films = films.order_by('-title')
+
+    context = {
+        'actor': actor,
+        'films': films
+    }
+    return render(request, 'actor_detail.html', context)
+    #actor = get_object_or_404(Actor, pk=pk)
+    #return render(request, 'actor_detail.html', {'actor': actor})
 
 
 def create_actors(request):
