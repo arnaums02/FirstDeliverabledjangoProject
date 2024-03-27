@@ -46,3 +46,70 @@ h1 {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
+
+/* Estilos para el contenedor principal */
+.container {
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilos para el título */
+.section-title {
+  display: inline-block;
+  margin-right: 10px; /* Espacio entre el título y el botón */
+}
+
+/* Estilos para el botón desplegable */
+.dropdown {
+  display: inline-block;
+  vertical-align: middle; /* Alinea verticalmente con el título */
+}
+
+/* Estilos para el botón desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Estilos para el botón */
+.dropbtn {
+  background-color: #2b39ea;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos para el contenido del desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Estilos para los enlaces dentro del desplegable */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Cambiar color de enlace al pasar el cursor */
+.dropdown-content a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Mostrar el desplegable cuando el botón se activa */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.selected {
+    font-weight: bold; /* Poner en negrita */
+}

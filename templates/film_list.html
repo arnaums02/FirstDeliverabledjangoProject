@@ -4,7 +4,18 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'film_list.css' %}">
     
-<h1>Llista de Películes</h1>
+<div class="container">
+  <h2 class="section-title">Llista de Películes</h2>
+  <div class="dropdown">
+    <button class="dropbtn">Ordenar por <span class="current-order">▼</span></button>
+        <div class="dropdown-content">
+            <a href="?order=duracion&direction=asc"{% if request.GET.order == 'duracion' and request.GET.direction == 'asc' %} class="selected"{% endif %}>Duración (ascendente)</a>
+            <a href="?order=duracion&direction=desc"{% if request.GET.order == 'duracion' and request.GET.direction == 'desc' %} class="selected"{% endif %}>Duración (descendente)</a>
+            <a href="?order=alfabetico&direction=asc"{% if request.GET.order == 'alfabetico' and request.GET.direction == 'asc' %} class="selected"{% endif %}>Título (ascendente)</a>
+            <a href="?order=alfabetico&direction=desc"{% if request.GET.order == 'alfabetico' and request.GET.direction == 'desc' %} class="selected"{% endif %}>Título (descendente)</a>
+        </div>
+  </div>
+</div>
 <div class="film-container">
     {% for film in books %}
         {% for review in review %}

@@ -11,6 +11,25 @@ class BookListView(ListView):
     template_name = 'film_list.html'
     context_object_name = 'books'
 
+    def get_queryset(self):
+        queryset = super().get_queryset()  # Obtiene el queryset base de la clase padre
+        order_by = self.request.GET.get('order')  # Obtiene el parámetro de orden
+        direction = self.request.GET.get('direction')  # Obtiene el parámetro de dirección
+
+        if order_by == 'duracion':
+            if direction == 'asc':
+                queryset = queryset.order_by('duration')
+            elif direction == 'desc':
+                queryset = queryset.order_by('-duration')
+        elif order_by == 'alfabetico':
+            if direction == 'asc':
+                queryset = queryset.order_by('title')
+            elif direction == 'desc':
+                queryset = queryset.order_by('-title')
+
+        return queryset
+
+
 
 def book_detail(request, pk):
     book = get_object_or_404(Film, pk=pk)

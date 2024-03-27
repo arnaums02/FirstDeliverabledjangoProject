@@ -144,3 +144,7 @@ p {
   display: block;
 }
 
+
+.selected {
+    font-weight: bold; /* Poner en negrita */
+}
