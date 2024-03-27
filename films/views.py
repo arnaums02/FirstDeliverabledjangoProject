@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from films.forms import BookForm, ReviewForm, ActorForm
 from django.views.generic import ListView
 from films.models import Film, Review, Actor
+from django.contrib.auth.forms import UserCreationForm
+from .forms import CustomUserCreationForm
 
 
 class BookListView(ListView):
@@ -101,3 +103,15 @@ def create_actors(request):
         form = ActorForm()
 
     return render(request, 'create_actors.html', {'form': form})
+
+
+def register_user(request):
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            # Aquí puedes procesar los datos del formulario, como guardar el usuario en la base de datos
+            form.save()
+            return redirect('login')  # Redirigir al usuario a la página de inicio de sesión después del registro
+    else:
+        form = CustomUserCreationForm()
+    return render(request, 'registration/register.html', {'form': form})

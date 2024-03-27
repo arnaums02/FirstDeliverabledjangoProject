@@ -9,20 +9,30 @@
 </head>
 <body>
 <nav>
-    <ul>
-        <li><a href="{% url 'book_list' %}">Inici</a></li>
-        <li><a href="{% url 'create_book' %}">Afegir película</a></li>
-        {% if user.is_authenticated %}
-            <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
-          {% csrf_token %}
-          <button type="submit">Tancar sessió</button>
-        </form>
-        {% else %}
-            <li><a href="{% url 'login' %}">Iniciar sessió</a></li>
-        {% endif %}
-    </ul>
+    <header>
+        <ul>
+            <li><a href="{% url 'book_list' %}">Inici</a></li>
+            <li><a href="{% url 'create_book' %}">Afegir película</a></li>
+            {% if user.is_authenticated %}
+                <li>
+                    <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+                        {% csrf_token %}
+                        <li><button type="submit">Tancar sessió</button></li>
+                    </form>
+                </li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Iniciar sessió</a></li>
+            {% endif %}
+        </ul>
+        <h1>Films</h1>
+    </header>
 </nav>
 {% block content %}
 {% endblock %}
+    <footer>
+        <p> © 2024 My Company. All rights reserved </p>
+        <p> Contact: info@mycompany.com | Phone: 123-456-7890 </p>
+    </footer>
 </body>
+    
 </html>

@@ -6,17 +6,36 @@ body {
     height: 100vh;
 }
 
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Estilos de la lista de navegación */
 nav ul {
     list-style-type: none;
     margin: 0 auto; /* Esto centrará la lista horizontalmente */
     padding: 0;
-    text-align: center; /* Si es necesario centrar los elementos dentro de la lista */
+    text-align: left; /* Si es necesario centrar los elementos dentro de la lista */
 }
 
 nav ul li {
-    display: block; /* Cambiado a bloque para que los elementos estén uno debajo del otro */
-    margin-bottom: 10px; /* Espaciado entre elementos */
+    display: inline-block; /* Cambiado a bloque para que los elementos estén uno debajo del otro */
+    margin-right: 10px; /* Espaciado entre elementos */
 }
 
 nav ul li a {
