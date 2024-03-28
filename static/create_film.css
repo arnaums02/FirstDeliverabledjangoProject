@@ -1,46 +1,67 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    padding: 10px;
     background-color: #f0f0f0;
     height: 100vh;
     text-align: center;
+    box-sizing: border-box; /* Añadido para incluir el padding y el borde en el cálculo del tamaño */
 }
 
-/* Estilos para el formulario */
+h2 {
+    margin-top: 100px; /* Ajustado para que sea consistente con el primer conjunto */
+}
+
 form {
-    margin: 0 auto; /* Centrar horizontalmente */
-    margin-top: 50px; /* Espacio superior para separar del borde superior */
-    background-color: #000;
+    background-color: #fff;
     max-width: 300px;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Agregado: Separación entre el formulario y la lista de libros */
+    /* Agregado: Separación entre el formulario y la lista de libros */
+    margin: 0px auto 20px;
 }
 
-button{
-    margin-top: 20px;
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
 }
 
-/* Estilo para el campo actors */
-#id_actors {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: 150px; /* Altura adecuada para mostrar múltiples opciones */
-    padding: 5px; /* Añade un pequeño espacio entre el borde y el contenido */
-    font-size: 14px; /* Tamaño de fuente adecuado */
-    border: 1px solid #ccc; /* Agrega un borde para definir el área del campo */
-    border-radius: 4px; /* Agrega bordes redondeados */
-    box-sizing: border-box; /* Asegura que el tamaño total del campo incluya el borde y el relleno */
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
 }
 
-/* Estilo para las opciones dentro del campo actors */
-#id_actors option {
-    padding: 3px; /* Añade espacio interno entre las opciones */
+form input[type="submit"]:hover {
+    background-color: #555;
 }
 
-/* Estilo para cuando se selecciona una opción */
-#id_actors option:checked {
-    background-color: #f0f0f0; /* Cambia el color de fondo cuando se selecciona una opción */
+.error-message {
+    color: #ff0000;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 3px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #555;
 }

@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'create_review.css' %}">
-     <meta charset="UTF-8">
-     <title>Crear Película - FILM</title>
-</head>
+{% extends 'base.html' %}
+
+{% block title %}
+Crear película
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'create_film.css' %}">
 <body>
-<a href="{% url 'book_list' %}"><button>Inici</button></a>
-<h1>Afegir película</h1>
+<h2>Afegir película</h2>
 <form method="post">
  {% csrf_token %}
  {{ form.as_p }}
  <input type="submit" value="Create">
 </form>
 <p>Falten actors? <a href="{% url 'create_actors' %}">Afegir actors.</a></p>
-</body>
-</html>
+
+{% endblock %}

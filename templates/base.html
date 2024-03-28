@@ -11,19 +11,22 @@
 <nav>
     <header>
         <ul>
-            <li><a href="{% url 'book_list' %}">Inici</a></li>
-            <li><a href="{% url 'create_book' %}">Afegir película</a></li>
-            {% if user.is_authenticated %}
-                <li>
-                    <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
-                        {% csrf_token %}
-                        <button type="submit">Tancar sessió</button>
-                    </form>
-                </li>
-            {% else %}
-                <li><a href="{% url 'login' %}">Iniciar sessió</a></li>
+            <li><a href="{% url 'book_list' %}" class="{% if request.path == '/' %}active{% endif %}">Inici</a></li>
+            <li><a href="{% url 'create_book' %}" class="{% if request.path == '/film/create/' %}active{% endif %}">Afegir película</a></li>
+
+            {% if not user.is_authenticated %}
+                <li><a href="{% url 'login' %}" class="{% if request.path == '/accounts/login/' %}active{% endif %}">Iniciar sessió</a></li>
             {% endif %}
+            <li><a href="{% url 'register' %}" class="{% if request.path == '/accounts/register/' %}active{% endif %}">Registrarse</a></li>
         </ul>
+
+        {% if user.is_authenticated %}
+            <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="logout-button">Hola {{ user.username }}, Tancar sessió</button>
+          </form>
+        {% endif %}
+
         <h1>WikiFilms</h1>
     </header>
 </nav>

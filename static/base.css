@@ -1,10 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    padding: 20px;
-    padding-top: 110px;
     background-color: #f0f0f0;
     height: 100vh;
+}
+
+h2{
+    margin-top: 100px;
 }
 
 header {
@@ -30,32 +32,59 @@ footer {
     left: 0;
     width: 100%;
 }
-
-/* Estilos de la lista de navegación */
-nav ul {
+/* Estilos para el menú */
+header ul {
     list-style-type: none;
-    margin: 0 auto; /* Esto centrará la lista horizontalmente */
+    margin: 0; /* Eliminamos el margen para que esté pegado al borde superior izquierdo */
     padding: 0;
-    text-align: left; /* Si es necesario centrar los elementos dentro de la lista */
+    position: absolute; /* Posicionamos el menú de manera absoluta */
+    top: 20px; /* Espacio superior */
+    left: 20px; /* Espacio izquierdo */
 }
 
-nav ul li {
-    display: inline-block; /* Cambiado a bloque para que los elementos estén uno al lado del otro */
-    margin-right: 10px; /* Espaciado entre elementos */
+header ul li {
+    display: inline;
 }
 
-nav ul li a,
-nav ul li button {
-    display: inline-block;
-    padding: 10px 20px; /* Espaciado interno */
-    background-color: #f0f0f0; /* Color de fondo */
-    color: #333; /* Color del texto */
-    text-decoration: none;
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 5px; /* Borde redondeado */
+header ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    padding: 10px 20px; /* Espaciado entre elementos del menú */
+    font-weight: bold; /* Texto en negrita */
 }
 
-nav ul li a:hover,
-nav ul li button {
-    background-color: #ddd; /* Cambio de color al pasar el ratón */
+/* Estilos para el subrayado al pasar el ratón */
+header ul li a:hover {
+    border-bottom: 2px solid white; /* Subrayado blanco */
+}
+
+/* Estilos para el subrayado activo */
+header ul li a.active {
+    border-bottom: 2px solid white; /* Subrayado blanco */
+}
+
+/* Estilos para el título */
+header h1 {
+    color: white; /* Color del texto */
+    margin: 20px; /* Espacio alrededor del título */
+    padding: 0; /* Elimina el relleno interior */
+    font-weight: bold; /* Texto en negrita */
+}
+/* Estilos para el botón de cerrar sesión */
+#logout-form {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#logout-form button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#logout-form button:hover {
+    border-bottom: 2px solid white;
 }

@@ -1,28 +1,24 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    height: 100vh;
-    text-align: center;
-    margin-top: 20px;
-}
-
-form {
-    margin: 0 auto; /* Centrar horizontalmente */
-    margin-top: 50px; /* Espacio superior para separar del borde superior */
+.register-form {
+    margin: 0 auto;
+    margin-top: 25px;
     background-color: #fff;
     max-width: 300px;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Agregado: Separación entre el formulario y la lista de libros */
+    margin-bottom: 20px;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form input[type="submit"] {
+h2 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="submit"] {
     width: calc(100% - 20px);
     padding: 10px;
     margin: 10px 0;
@@ -31,30 +27,20 @@ form input[type="submit"] {
     box-sizing: border-box;
 }
 
-form input[type="submit"] {
+.register-form input[type="submit"] {
     background-color: #333;
     color: #fff;
     cursor: pointer;
     border: none;
 }
 
-form input[type="submit"]:hover {
+.register-form input[type="submit"]:hover {
     background-color: #555;
 }
 
 .error-message {
     color: #ff0000;
     margin-top: 10px;
-    text-align: left; /* Alineación de los mensajes de error */
-}
-
-.error-list {
-    list-style-type: none;
+    margin-bottom: 0;
     padding: 0;
-    margin: 0;
 }
-
-.error-list li {
-    margin-bottom: 5px;
-}
-

@@ -80,7 +80,7 @@ p {
     margin: 10px; /* Ajusta el margen entre los elementos */
     box-sizing: border-box; /* Incluye el padding y el border en el ancho del elemento */
     text-align: center;
-    background: #d4e0f8;
+    background: #f4f4ff;
 }
 
 /* Estilos para el contenedor principal */

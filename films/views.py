@@ -18,12 +18,12 @@ class BookListView(ListView):
         order_by = self.request.GET.get('order')  # Obtiene el parámetro de orden
         direction = self.request.GET.get('direction')  # Obtiene el parámetro de dirección
 
-        if order_by == 'Duració':
+        if order_by == 'duracion':
             if direction == 'asc':
                 queryset = queryset.order_by('duration')
             elif direction == 'desc':
                 queryset = queryset.order_by('-duration')
-        elif order_by == 'Alfabètic':
+        elif order_by == 'alfabetico':
             if direction == 'asc':
                 queryset = queryset.order_by('title')
             elif direction == 'desc':
