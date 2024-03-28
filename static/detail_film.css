@@ -1,9 +1,8 @@
 /* Estilos para el contenedor principal */
 
-
 body {
     font-family: Arial, sans-serif;
-    margin: 10px;
+    margin-top: 120px;
     padding: 0;
     background-color: #f0f0f0;
     height: 100vh;

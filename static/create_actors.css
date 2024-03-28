@@ -1,7 +1,8 @@
-body{
+body {
     margin-top: 130px;
     text-align: center;
 }
+
 .create-review-container {
     font-family: Arial, sans-serif;
     margin: 0 auto;
@@ -10,10 +11,6 @@ body{
     max-width: 300px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.create-review-container h1 {
-    margin-top: 10px;
 }
 
 .create-review-container h2 {

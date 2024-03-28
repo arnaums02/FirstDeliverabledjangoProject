@@ -7,13 +7,15 @@ Crear película
 {% block content %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'create_film.css' %}">
-<body>
-<h2>Afegir película</h2>
-<form method="post">
- {% csrf_token %}
- {{ form.as_p }}
- <input type="submit" value="Create">
-</form>
-<p>Falten actors? <a href="{% url 'create_actors' %}">Afegir actors.</a></p>
+
+<div class="create-film-container">
+    <h2>Afegir película</h2>
+    <form method="post">
+     {% csrf_token %}
+     {{ form.as_p }}
+     <input type="submit" value="Create" class="form-button">
+    </form>
+    <p>Falten actors? <a href="{% url 'create_actors' %}">Afegir actors.</a></p>
+</div>
 
 {% endblock %}

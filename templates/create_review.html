@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'create_review.css' %}">
-    <meta charset="UTF-8">
-    <title>Crear Review - FILM</title>
-   
+{% extends 'base.html' %}
 
-</head>
-<body>
-<a href="{% url 'book_list' %}"><button>Inici</button></a>
-<h1>{{ book.title }}</h1>
-<h2>Afegir un nou comentari</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Guardar</button>
-</form>
-</body>
-</html>
+{% block title %}
+Crear review.
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'create_review.css' %}">
+
+<div class="create-review-container">
+    <h1>{{ book.title }}</h1>
+    <h2>Afegir un nou comentari</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="form-button">Guardar</button>
+    </form>
+</div>
+
+{% endblock %}

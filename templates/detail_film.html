@@ -1,6 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Detalls película
+{% endblock %}
+
+{% block content %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'detail_film.css' %}">
-<a href="{% url 'book_list' %}"><button>Inici</button></a>
 <h1>{{ book.title }}</h1>
 <p>Autor: {{ book.author }}</p>
 <p>Gènere: {{ book.genre }}</p>
@@ -32,3 +38,4 @@
 {% else %}
   <p><em>No hay comentarios disponibles. Se el primero en comentar la película!</em></p>
 {% endif %}
+{% endblock %}

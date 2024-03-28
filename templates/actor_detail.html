@@ -1,6 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Detalls actor
+{% endblock %}
+
+
+{% block content %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'detail_actor.css' %}">
-<a href="{% url 'book_list' %}"><button>Inici</button></a>
 <h1>{{ actor.name }}</h1>
 <p>Edat: {{ actor.age }}</p>
 <p>País: {{ actor.country }}</p>
@@ -36,5 +43,4 @@
     {% endif %}
 </div>
 
-
-</div>
+{% endblock %}
