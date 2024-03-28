@@ -22,7 +22,7 @@ Our project involves creating an application for Wiki Films, with the main goal 
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/GEI-Software/Music-Engine
+   git clone https://github.com/arnaums02/FirstDeliverabledjangoProject.git
    ```
 2. Run the server
    ```sh
